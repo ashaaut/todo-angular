@@ -6,7 +6,7 @@ export class Model{ //create es6 module
     this.items=[
       new TodoItem('Buy flowers',false),
       new TodoItem('get shoes',false),
-      new TodoItem('collect money',false),
+      new TodoItem('collect money',true),
       new TodoItem('call sonali',false)
     ]
   }
