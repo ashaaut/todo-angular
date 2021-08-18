@@ -1,10 +1,17 @@
 import { Component } from '@angular/core';
+import { Model, TodoItem } from './model';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+@Component({ //component instance
+  selector: 'todo-app',
+  templateUrl: 'app.component.html',
+
 })
-export class AppComponent {
-  title = 'todo';
+export class AppComponent { //observables or dependacy
+  model = new Model();
+  getName() {
+    return this.model.user
+  }
+  getTodoItems(){
+    return this.model.items;
+  }
 }
