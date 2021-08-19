@@ -14,4 +14,9 @@ export class AppComponent { //observables or dependacy
   getTodoItems(){
     return this.model.items.filter(item=>!item.done)
   }
+  addItem(newItem){
+    if(newItem!=""){
+      this.model.items.push(new TodoItem(newItem,false));
+    }
+  }
 }
